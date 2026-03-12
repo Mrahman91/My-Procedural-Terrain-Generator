@@ -425,11 +425,11 @@
             });
             
             document.getElementById('randomize').addEventListener('click', () => {
-                params.scale = Math.random() * 180 + 20;
-                params.amplitude = Math.random() * 40 + 10;
-                params.octaves = Math.floor(Math.random() * 7) + 1;
-                params.persistence = Math.random() * 0.9 + 0.1;
-                params.lacunarity = Math.random() * 3 + 1;
+                params.scale = Math.random() * 145 + 20;
+                params.amplitude = Math.random() * 35 + 10;
+                params.octaves = Math.floor(Math.random() * 8) + 1;
+                params.persistence = Math.random() * 1.2 + 0.1;
+                params.lacunarity = Math.random() * 4 + 1;
                 params.seed = Math.floor(Math.random() * 9999);
                 
                 Object.keys(sliders).forEach(key => {
