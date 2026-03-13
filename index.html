@@ -488,7 +488,7 @@
             
             // Main oscillator - frequency determined by base frequency
             const mainOsc = audioContext.createOscillator();
-            mainOsc.type = 'sine';
+            mainOsc.type = 'cosine';
             mainOsc.frequency.setValueAtTime(audioParams.baseFreq, now);
             
             // Create frequency modulation using noise parameters
@@ -521,7 +521,7 @@
             const harmonicOscs = [];
             for (let i = 1; i <= Math.min(params.octaves, 4); i++) {
                 const harmOsc = audioContext.createOscillator();
-                harmOsc.type = 'sine';
+                harmOsc.type = 'cosine';
                 
                 const harmGain = audioContext.createGain();
                 harmGain.gain.setValueAtTime(
