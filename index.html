@@ -493,7 +493,7 @@
             
             // Create frequency modulation using noise parameters
             // Sample noise values over time to create evolving timbre
-            const samplePoints = 80;
+            const samplePoints = 180;
             const timeStep = duration / samplePoints;
             
             for (let i = 0; i < samplePoints; i++) {
@@ -510,7 +510,7 @@
                 );
                 
                 // Map noise (-1 to 1) to frequency deviation
-                const freqDeviation = noiseValue * audioParams.baseFreq * 0.5;
+                const freqDeviation = noiseValue * audioParams.baseFreq * 0.42;
                 mainOsc.frequency.linearRampToValueAtTime(
                     audioParams.baseFreq + freqDeviation,
                     t
